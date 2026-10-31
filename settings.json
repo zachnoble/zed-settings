@@ -1,0 +1,169 @@
+{
+  "cli_default_open_behavior": "new_window",
+
+  "theme": "Dracula",
+  "icon_theme": "Colored Zed Icons Theme Dark",
+  "experimental.theme_overrides": {
+    "background.appearance": "opaque"
+  },
+  "ui_font_size": 13,
+  "buffer_font_family": ".ZedMono",
+  "buffer_font_size": 11,
+
+  "title_bar": {
+    "show_sign_in": false,
+    "show_user_picture": false
+  },
+  "toolbar": {
+    "breadcrumbs": false,
+    "quick_actions": false
+  },
+  "status_bar": {
+    "experimental.show": false
+  },
+
+  "project_panel": {
+    "dock": "left",
+    "hide_hidden": false,
+    "auto_fold_dirs": false
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "git_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+
+  "tab_size": 4,
+  "extend_comment_on_newline": false,
+  "inline_code_actions": false,
+  "edit_predictions": {
+    "provider": "none"
+  },
+
+  "file_scan_exclusions": [
+    "**/.git/**",
+    "**/.DS_Store/**",
+    "**/.vscode/**",
+
+    "__pycache__",
+    "**/.venv/**",
+    "**/.mypy_cache/**",
+    "**/.pytest_cache/**",
+    "**/.ruff_cache/**",
+    "**/*.egg-info",
+
+    "**/node_modules/**",
+    "**/.react-router/**",
+    "**/.turbo/**",
+    "**/tsconfig.tsbuildinfo/**",
+
+    "**/bin/**",
+    "**/build/**",
+    "**/dist/**",
+    "**/tmp/**",
+    "**/init.sql/**"
+  ],
+
+  "agent": {
+    "dock": "right",
+    "default_profile": "write",
+    "default_model": {
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-5-latest"
+    },
+    "model_parameters": [],
+    "tool_permissions": {
+      "default": "allow"
+    }
+  },
+  "agent_servers": {
+    "claude-acp": {
+      "type": "registry",
+      "default_config_options": {
+        "model": "opus",
+        "mode": "bypassPermissions"
+      }
+    }
+  },
+
+  "lsp": {
+    "vtsls": {
+      "enable_lsp_tasks": true,
+      "settings": {
+        "typescript": {
+          "updateImportsOnFileMove": { "enabled": "always" }
+        },
+        "javascript": {
+          "updateImportsOnFileMove": { "enabled": "always" }
+        }
+      }
+    },
+    "gopls": {
+      "settings": {
+        "allowModfileModifications": false,
+        "env": {
+          "GOFLAGS": "-mod=readonly"
+        }
+      }
+    },
+    "vscode-css-language-server": {
+      "settings": {
+        "css": {
+          "lint": {
+            "unknownAtRules": "ignore"
+          }
+        }
+      }
+    },
+    "oxfmt": {
+      "initialization_options": {
+        "settings": {
+          "fmt.configPath": null
+        }
+      }
+    }
+  },
+
+  "languages": {
+    "TypeScript": {
+      "format_on_save": "on",
+      "prettier": { "allowed": false },
+      "formatter": [{ "language_server": { "name": "oxfmt" } }]
+    },
+    "TSX": {
+      "format_on_save": "on",
+      "prettier": { "allowed": false },
+      "formatter": [{ "language_server": { "name": "oxfmt" } }]
+    },
+    "CSS": {
+      "format_on_save": "on",
+      "prettier": { "allowed": false },
+      "formatter": [{ "language_server": { "name": "oxfmt" } }]
+    },
+    "YAML": {
+      "format_on_save": "on",
+      "prettier": { "allowed": false },
+      "formatter": [{ "language_server": { "name": "oxfmt" } }]
+    },
+    "Python": {
+      "language_servers": ["! basedpyright ", "ty"]
+    },
+    "Proto": {
+      "format_on_save": "on",
+      "language_servers": ["! buf-lsp"],
+      "formatter": {
+        "external": {
+          "command": "clang-format",
+          "arguments": ["-style={IndentWidth: 4, ColumnLimit: 0}"]
+        }
+      }
+    },
+    "Caddyfile": {
+      "format_on_save": "on"
+    }
+  }
+}
