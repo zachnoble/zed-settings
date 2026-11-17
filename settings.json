@@ -49,23 +49,15 @@
     "**/.DS_Store/**",
     "**/.vscode/**",
 
-    "__pycache__",
-    "**/.venv/**",
-    "**/.mypy_cache/**",
-    "**/.pytest_cache/**",
-    "**/.ruff_cache/**",
-    "**/*.egg-info",
-
     "**/node_modules/**",
-    "**/.react-router/**",
-    "**/.turbo/**",
     "**/tsconfig.tsbuildinfo/**",
+    "**/.tsbuildinfo/**",
+    "**/.svelte-kit/**",
 
     "**/bin/**",
     "**/build/**",
     "**/dist/**",
     "**/tmp/**",
-    "**/init.sql/**"
   ],
 
   "agent": {
@@ -138,6 +130,11 @@
       "format_on_save": "on",
       "prettier": { "allowed": false },
       "formatter": [{ "language_server": { "name": "oxfmt" } }]
+    },
+    "Svelte": {
+      "format_on_save": "on",
+      "formatter": [{ "language_server": { "name": "oxfmt" } }],
+      "language_servers": ["oxlint", "svelte-language-server"]
     },
     "CSS": {
       "format_on_save": "on",
