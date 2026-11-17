@@ -1,3 +1,4 @@
+
 {
   "cli_default_open_behavior": "new_window",
 
@@ -57,7 +58,7 @@
     "**/bin/**",
     "**/build/**",
     "**/dist/**",
-    "**/tmp/**",
+    "**/tmp/**"
   ],
 
   "agent": {
@@ -87,10 +88,14 @@
       "enable_lsp_tasks": true,
       "settings": {
         "typescript": {
-          "updateImportsOnFileMove": { "enabled": "always" }
+          "updateImportsOnFileMove": {
+            "enabled": "always"
+          }
         },
         "javascript": {
-          "updateImportsOnFileMove": { "enabled": "always" }
+          "updateImportsOnFileMove": {
+            "enabled": "always"
+          }
         }
       }
     },
@@ -111,11 +116,9 @@
         }
       }
     },
-    "oxfmt": {
-      "initialization_options": {
-        "settings": {
-          "fmt.configPath": null
-        }
+    "biome": {
+      "settings": {
+        "require_config_file": true
       }
     }
   },
@@ -123,39 +126,87 @@
   "languages": {
     "TypeScript": {
       "format_on_save": "on",
-      "prettier": { "allowed": false },
-      "formatter": [{ "language_server": { "name": "oxfmt" } }]
+      "prettier": {
+        "allowed": false
+      },
+      "formatter": [
+        {
+          "language_server": {
+            "name": "biome"
+          }
+        }
+      ]
     },
     "TSX": {
       "format_on_save": "on",
-      "prettier": { "allowed": false },
-      "formatter": [{ "language_server": { "name": "oxfmt" } }]
+      "prettier": {
+        "allowed": false
+      },
+      "formatter": [
+        {
+          "language_server": {
+            "name": "biome"
+          }
+        }
+      ]
     },
     "Svelte": {
       "format_on_save": "on",
-      "formatter": [{ "language_server": { "name": "oxfmt" } }],
-      "language_servers": ["oxlint", "svelte-language-server"]
+      "formatter": [
+        {
+          "language_server": {
+            "name": "biome"
+          }
+        }
+      ],
+      "language_servers": [
+        "biome",
+        "svelte-language-server"
+      ],
     },
     "CSS": {
       "format_on_save": "on",
-      "prettier": { "allowed": false },
-      "formatter": [{ "language_server": { "name": "oxfmt" } }]
+      "prettier": {
+        "allowed": false
+      },
+      "formatter": [
+        {
+          "language_server": {
+            "name": "biome"
+          }
+        }
+      ]
     },
     "YAML": {
       "format_on_save": "on",
-      "prettier": { "allowed": false },
-      "formatter": [{ "language_server": { "name": "oxfmt" } }]
+      "prettier": {
+        "allowed": false
+      },
+      "formatter": [
+        {
+          "language_server": {
+            "name": "biome"
+          }
+        }
+      ]
     },
     "Python": {
-      "language_servers": ["! basedpyright ", "ty"]
+      "language_servers": [
+        "!basedpyright",
+        "ty"
+      ]
     },
     "Proto": {
       "format_on_save": "on",
-      "language_servers": ["! buf-lsp"],
+      "language_servers": [
+        "!buf-lsp"
+      ],
       "formatter": {
         "external": {
           "command": "clang-format",
-          "arguments": ["-style={IndentWidth: 4, ColumnLimit: 0}"]
+          "arguments": [
+            "-style={IndentWidth: 4, ColumnLimit: 0}"
+          ]
         }
       }
     },
