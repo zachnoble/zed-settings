@@ -127,8 +127,7 @@
     "TypeScript": {
       "format_on_save": "on",
       "code_actions_on_format": {
-         "source.fixAll.biome": true,
-         "source.organizeImports": true
+         "source.fixAll.biome": true
        },
       "prettier": {
         "allowed": false
@@ -144,8 +143,7 @@
     "TSX": {
       "format_on_save": "on",
       "code_actions_on_format": {
-         "source.fixAll.biome": true,
-         "source.organizeImports": true
+         "source.fixAll.biome": true
        },
       "prettier": {
         "allowed": false
@@ -161,8 +159,7 @@
     "Svelte": {
       "format_on_save": "on",
       "code_actions_on_format": {
-         "source.fixAll.biome": true,
-         "source.organizeImports": true
+         "source.fixAll.biome": true
        },
       "formatter": [
         {
